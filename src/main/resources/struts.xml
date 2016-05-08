@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant value="/websck,/sockjs/websck/info" name="struts.action.excludePattern"/>
+	
+	<package name="virnet" namespace="/" extends="struts-default,json-default">
+	    
+	    <action name="login" class="log" method="login">
+	        <result name="success" type="redirect">management/management.jsp</result>
+	        <result name="error" type="redirect">log/login.jsp</result>
+	    </action>
+	    
+	</package>
+</struts>
